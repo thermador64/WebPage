@@ -1,0 +1,33 @@
+td{
+	border:1px solid black;
+	text-align: center;
+}
+table{
+	border-collapse: collapse;
+	width:250px;
+}
+.header{
+	background:lightblue;
+	font-family:Calibri;
+}
+.body{
+	background:lightgrey;
+	font-family:Calibri;
+}
+div > label{
+	font-family:Calibri;
+}
+#mainDiv{
+	font-weight:bold;
+	font-size:20px;
+}
+#myButton{
+	padding:5px;
+	background:lightgreen;
+}
+#myDialog{
+	display:none;
+}
+.dialogLine > label{
+	padding-right:10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="jquery.ui/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="jquery.ui/jquery-ui.min.css">
+	<script type="text/javascript" src="lodash.min.js"></script>
+	<script type="text/javascript" src="angular.1.2.28.min.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+	<link rel="stylesheet" type="text/css" href="pageColors.css" />  
+	<title></title>
+</head>
+<body class="formBody" id="bodyTag">
+	<div id="mainDiv">My Web Page</div>
+	<div id="angDiv" ng-app="">	
+		<label>Title for table</label>
+		<input type="text" ng-model="width"></input>
+		<p ng-bind="length"></p>
+		<p>{{width}}</p>
+	</div>
+	<table id="myTable" width=""></table>
+</body>
+
+</html> 
