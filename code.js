@@ -1,10 +1,12 @@
 $(document).ready(function () {
+	//The first few lines of code are adding in html elements to be used in the page
 	$('#mainDiv').after('<div id="div2"><div>');
 	$('#angDiv').find('input').after('<br /><br /><button class="ui-button ui-widget ui-corner-all" id="myButton">Add values</button>');
 	$('#myTable').after('<div id="myDialog">' +
 		'<div class="dialogLine"><label>Value1:</label><input type="text" id="addValue1" ></div><br />' +
 		'<div class="dialogLine"><label>Value2:</label><input type="text" id="addValue2" ></div><br />' + 
 		'<div class="dialogLine"><label>Value3:</label><input type="text" id="addValue3" ></div></div>');
+	//This button adds elements into the table using a jquery dialog box
 	$('#myButton').on('click', function (event) { 
 		$("#myDialog").dialog({
 						autoOpen: false,
@@ -32,7 +34,7 @@ $(document).ready(function () {
 					});
 		$("#myDialog").dialog( "open" );	
 	});
-	
+	//This ajax request gets json data from a text file to display in a html table
 	$.ajax({
 		url: 'data.txt',
 		type: 'GET',
@@ -53,7 +55,7 @@ $(document).ready(function () {
 			 });
 			$('#myTable').append(tbl);
 		},error: function(var1, var2, var3) {
-			$('#div2').text(JSON.stringify(var1));
+			$('#div2').text('Error loading:' + JSON.stringify(var1));
 		}
 	});
 	
