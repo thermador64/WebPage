@@ -31,3 +31,9 @@ div > label{
 .dialogLine > label{
 	padding-right:10px;
 }
+
+#delButton{
+	padding:5px;
+	background:red;
+	margin-left:5px;
+}

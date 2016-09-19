@@ -2,6 +2,7 @@ $(document).ready(function () {
 	//The first few lines of code are adding in html elements to be used in the page
 	$('#mainDiv').after('<div id="div2"><div>');
 	$('#angDiv').find('input').after('<br /><br /><button class="ui-button ui-widget ui-corner-all" id="myButton">Add values</button>');
+	$('#myButton').after('<button class="ui-button ui-widget ui-corner-all" id="delButton">Delete</button>');
 	$('#myTable').after('<div id="myDialog">' +
 		'<div class="dialogLine"><label>Value1:</label><input type="text" id="addValue1" ></div><br />' +
 		'<div class="dialogLine"><label>Value2:</label><input type="text" id="addValue2" ></div><br />' + 
@@ -33,6 +34,10 @@ $(document).ready(function () {
 						}
 					});
 		$("#myDialog").dialog( "open" );	
+	});
+	
+	$('#delButton').on('click', function (event) {
+		$('#myTable tr').last().remove();
 	});
 	//This ajax request gets json data from a text file to display in a html table
 	$.ajax({
